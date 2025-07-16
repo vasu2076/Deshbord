@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchDataFromApi = async (url) => {
   try {
-    const { data } = await axios.get("https://deshbord-gamma.vercel.app" + url);
+    const { data } = await axios.get("https://deshbord-rho.vercel.app" + url);
     return data;
   } catch (error) {
     console.log(error);
@@ -12,7 +12,7 @@ export const fetchDataFromApi = async (url) => {
 
 export const postData = async (url, fromdata) => {
   try {
-    const { data } = await axios.post("https://deshbord-gamma.vercel.app" + url, fromdata);
+    const { data } = await axios.post("https://deshbord-rho.vercel.app" + url, fromdata);
     return data;
   } catch (error) {
     console.error("POST Error:", error.response?.data || error.message);
@@ -21,18 +21,18 @@ export const postData = async (url, fromdata) => {
 };
 
 export const editdata = async (url, updatedata) => {
-  const { res } = await axios.put(`https://deshbord-gamma.vercel.app${url}`, updatedata);
+  const { res } = await axios.put(`https://deshbord-rho.vercel.app${url}`, updatedata);
   return res;
 };
 
 export const deleteData = async (url) => {
-  const { res } = await axios.delete(`https://deshbord-gamma.vercel.app${url}`);
+  const { res } = await axios.delete(`https://deshbord-rho.vercel.app${url}`);
   return res;
 };
 
 export const userData = async (url, fromdata) => {
   try {
-    const { data } = await axios.post("https://deshbord-gamma.vercel.app" + url, fromdata);
+    const { data } = await axios.post("https://deshbord-rho.vercel.app" + url, fromdata);
     return data;
   } catch (error) {
     console.error("POST Error:", error.response?.data || error.message);
@@ -42,7 +42,7 @@ export const userData = async (url, fromdata) => {
 
 export const loginData = async (url, formData) => {
   try {
-    const { data } = await axios.post("https://deshbord-gamma.vercel.app" + url, formData);
+    const { data } = await axios.post("https://deshbord-rho.vercel.app" + url, formData);
     return data;
   } catch (error) {
     console.error("POST Error:", error.response?.data || error.message);
