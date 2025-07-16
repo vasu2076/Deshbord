@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchDataFromApi = async (url) => {
   try {
-    const { data } = await axios.get("http://localhost:4000" + url);
+    const { data } = await axios.get("https://deshbord-backend.vercel.app" + url);
     return data;
   } catch (error) {
     console.log(error);
@@ -12,7 +12,7 @@ export const fetchDataFromApi = async (url) => {
 
 export const postData = async (url, fromdata) => {
   try {
-    const { data } = await axios.post("http://localhost:4000" + url, fromdata);
+    const { data } = await axios.post("https://deshbord-backend.vercel.app" + url, fromdata);
     return data;
   } catch (error) {
     console.error("POST Error:", error.response?.data || error.message);
@@ -21,18 +21,18 @@ export const postData = async (url, fromdata) => {
 };
 
 export const editdata = async (url, updatedata) => {
-  const { res } = await axios.put(`http://localhost:4000${url}`, updatedata);
+  const { res } = await axios.put(`https://deshbord-backend.vercel.app${url}`, updatedata);
   return res;
 };
 
 export const deleteData = async (url) => {
-  const { res } = await axios.delete(`http://localhost:4000${url}`);
+  const { res } = await axios.delete(`https://deshbord-backend.vercel.app${url}`);
   return res;
 };
 
 export const userData = async (url, fromdata) => {
   try {
-    const { data } = await axios.post("http://localhost:4000" + url, fromdata);
+    const { data } = await axios.post("https://deshbord-backend.vercel.app" + url, fromdata);
     return data;
   } catch (error) {
     console.error("POST Error:", error.response?.data || error.message);
@@ -42,7 +42,7 @@ export const userData = async (url, fromdata) => {
 
 export const loginData = async (url, formData) => {
   try {
-    const { data } = await axios.post("http://localhost:4000" + url, formData);
+    const { data } = await axios.post("https://deshbord-backend.vercel.app" + url, formData);
     return data;
   } catch (error) {
     console.error("POST Error:", error.response?.data || error.message);
