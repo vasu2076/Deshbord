@@ -14,6 +14,10 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
 app.use(cors());
 app.use(express.json());
 
