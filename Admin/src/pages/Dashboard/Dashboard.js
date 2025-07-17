@@ -135,8 +135,8 @@ const Dashboard = () => {
                   </Menu>
                 </div>
               </div>
-              <h3 className="text-white font-weight-bold">$3,787,681.00</h3>
-              <p>$3,578.90 in last month</p>
+              <h3 className="text-white font-weight-bold">RS 3,787,681.00</h3>
+              <p>RS 3,578.90 in last month</p>
               <Chart
                 chartType="PieChart"
                 data={data}
