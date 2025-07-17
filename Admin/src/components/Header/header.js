@@ -54,7 +54,7 @@ export const Header = () => {
             </Link>
           </div>
           {context.windowWidth > 992 && (
-            <div className="col-sm-3 d-flex align-items-center part2 res-hide">
+            <div className="col-sm-3 d-flex align-items-center part2 res-hide gap-2">
               <Button
                 className="rounded-circle mr-3"
                 onClick={() =>
