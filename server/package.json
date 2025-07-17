@@ -4,7 +4,8 @@
   "description": "it's server for Admin-Deshbord",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon"
+    "test": "nodemon",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
