@@ -50,7 +50,7 @@ export const Header = () => {
           <div className="col-sm-2 part1">
             <Link to={"/"} className="d-flex align-items-center logo">
               <img src={logo} alt="logo" />
-              <span className="ml-2">Shop Pilot</span>
+              <span className="ml-2">ShopPilot</span>
             </Link>
           </div>
           {context.windowWidth > 992 && (
