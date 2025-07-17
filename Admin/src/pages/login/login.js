@@ -46,7 +46,7 @@ const Login = () => {
                 <div className="login-box mt-5">
                  <div className="logo text-center">
                         <Link to='/dashboard'><img src={logo} alt="logo" width="60" /></Link>
-                        <h5 className="font-weight-bold">Login to Hotash</h5>
+                        <h5 className="font-weight-bold">Login to ShopPilot</h5>
                     </div>
 
                      <div className="login-wrapper mt-3 card border">
