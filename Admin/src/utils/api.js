@@ -26,7 +26,7 @@ export const editdata = async (url, updatedata) => {
 };
 
 export const deleteData = async (url) => {
-  const { res } = await axios.delete(`https://deshbord.onrender.com${url}`);
+  const { res } = await axios.delete(`https://deshbord.onrender.com{url}`);
   return res;
 };
 
