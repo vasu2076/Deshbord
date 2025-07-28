@@ -57,13 +57,13 @@ const Dashboard = () => {
         window.scrollTo(0,0);
     },[]);
 
-    const Deleteproduct = (_id)=> [
+    const Deleteproduct = (_id)=> {
       deleteData(`/products/${_id}`).then((res)=>{
         fetchDataFromApi('/products').then((res)=>{
           setproductList(res)
         })
       })
-    ]
+    }
 
   return (
     <>
