@@ -59,13 +59,13 @@ const Products = () => {
         },[]);
 
 
-            const Deleteproduct = (_id)=> [
+            const Deleteproduct = (_id)=> {
               deleteData(`/products/${_id}`).then((res)=>{
                 fetchDataFromApi('/products').then((res)=>{
                   setproductList(res)
                 })
               })
-            ]
+            }
 
     return (
         <>
