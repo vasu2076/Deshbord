@@ -164,8 +164,10 @@ const handleChangecategory = (event) => {
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
-                                                <MenuItem value={'Men'}>Men</MenuItem>
+                                               <MenuItem value={'Men'}>Men</MenuItem>
                                                 <MenuItem value={'Women'}>Women</MenuItem>
+                                                <MenuItem value={'Girls'}>Girls</MenuItem>
+                                                <MenuItem value={'Boys'}>Boys</MenuItem>
                                                 <MenuItem value={'Kids'}>Kids</MenuItem>
                                             </Select>
                                         </div>
