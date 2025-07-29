@@ -1,7 +1,6 @@
 const {Product} =require('../models/products')
 const express = require('express');
 const router  = express.Router();
-// const pLimit = require('p-limit');
 const cloudinary = require('cloudinary').v2;
 
 router.get('/', async (req, res) => {
@@ -19,12 +18,34 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/cat', async (req, res) => {
+  const { catName } = req.query;
+
+  try {
+    const query = catName
+      ? { catName: { $regex: new RegExp(`^${catName}$`, 'i') } }
+      : {};
+
+    const products = await Product.find(query);
+
+    if (!products || products.length === 0) {
+      return res.status(404).json({
+        message: 'No products found for the given category',
+        success: false
+      });
+    }
+    else{
+      return res.status(200).send(products);
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 // insert
 router.post('/create', async (req, res) => {
     try{
       const { images } = req.body;
-
-  // Dynamically import p-limit ESM
   const pLimit = (await import('p-limit')).default;
   const limit = pLimit(2);
 
