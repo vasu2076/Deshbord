@@ -22,9 +22,11 @@ app.use(cors());
 app.use(express.json());
 
 const productRoutes = require('./routes/products');
-const userRoutes = require('./routes/signup')
+const userRoutes = require('./routes/signup');
+const cartRoutes = require('./routes/cart');
 app.use('/products', productRoutes);
 app.use('/signup', userRoutes);
+app.use('/cart',cartRoutes)
 
 // Database
 mongoose.connect(process.env.CONNECTION_STRING)
