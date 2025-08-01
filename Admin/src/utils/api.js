@@ -26,7 +26,7 @@ export const editdata = async (url, updatedata) => {
 };
 
 export const deleteData = async (url) => {
-  const { data } = await axios.delete(`https://deshbord.onrender.com${url}`);
+  const { data } = await axios.delete(`https://deshbord-backend.vercel.app${url}`);
   return data;
 };
 
